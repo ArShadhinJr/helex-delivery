@@ -7,7 +7,7 @@ const HappyCustomer = () => {
     const [ customers, setCustomers ] = useState( [] );
     //  Load Services data from services json file 
     useEffect( () => {
-        fetch( 'http://localhost:5000/customer' )
+        fetch( 'https://quiet-crag-51319.herokuapp.com/customer' )
             .then( res => res.json() )
             .then( data => setCustomers( data ) )
     }, [] );

@@ -19,7 +19,7 @@ const DoctorDetails = () => {
 
     //use effect load indivitual data 
     useEffect( () => {
-        fetch( `http://localhost:5000/services/${offerId}` )
+        fetch( `https://quiet-crag-51319.herokuapp.com/services/${offerId}` )
             .then( res => res.json() )
             .then( data => setOffers( data ) )
     }, [] );
@@ -31,7 +31,7 @@ const DoctorDetails = () => {
         // data.status = "pending";
         // data.img = { img },
 
-        axios.post( 'http://localhost:5000/confirmOrder', data )
+        axios.post( 'https://quiet-crag-51319.herokuapp.com/confirmOrder', data )
             .then( res => {
                 if ( res.data.insertedId ) {
                     alert( 'order placed successfully' );

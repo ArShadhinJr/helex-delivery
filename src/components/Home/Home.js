@@ -11,7 +11,7 @@ function Home() {
     const [ services, setServices ] = useState( [] );
     //  load data frm frist page for home page 
     useEffect( () => {
-        fetch( 'http://localhost:5000/services' )
+        fetch( 'https://quiet-crag-51319.herokuapp.com/services' )
             .then( res => res.json() )
             .then( data => setServices( data ) )
     }, [] );
